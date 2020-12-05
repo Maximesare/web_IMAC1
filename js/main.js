@@ -46,7 +46,7 @@ const getData = async (from) => {
 			let hsl = h+','+s+','+l;
 
 			// ecriture de l'url d'appel de l'API
-			var response = await fetch('https://cors-anywhere.herokuapp.com/http://thecolorapi.com/id?rgb='+hsl+'&format=json');
+			var response = await fetch('https://cors-anywhere.herokuapp.com/http://thecolorapi.com/id?hsl='+hsl+'&format=json');
 		}
 		if(from == "hsv") {
 
@@ -57,7 +57,7 @@ const getData = async (from) => {
 			let hsv = h+','+s+','+v;
 
 			// ecriture de l'url d'appel de l'API
-			var response = await fetch('https://cors-anywhere.herokuapp.com/http://thecolorapi.com/id?rgb='+hsv+'&format=json');
+			var response = await fetch('https://cors-anywhere.herokuapp.com/http://thecolorapi.com/id?hsv='+hsv+'&format=json');
 		}
 		if(from == "rgb") {
 
