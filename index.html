@@ -3,12 +3,52 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Test</title>
+    <title>Web_IMAC1</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    
+    <h1>Conversion</h1>
+
+    <form action="" method="post">
+      <p>D'après RGB</p>
+      <div class="form-section">
+        <input type="number" name="r" min="0" max="255" placeholder="RED" required>
+        <input type="number" name="g" min="0" max="255" placeholder="GREEN" required>
+        <input type="number" name="b" min="0" max="255" placeholder="BLUE" required>
+      </div>
+      <div class="form-section">
+        <input id="rgb-convert-btn" type="button" value="GO">
+      </div>
+    </form>
+
+    <div id="loader" class="hidden"></div>
+
+    <div id="conversion-result" class="hidden">
+      <div id="color-sample"></div>
+      <div id="color-codes">
+        <div class="result-cmyk">
+          <strong>CMYK</strong>
+          <p></p>
+        </div>
+        <div class="result-hex">
+          <strong>HEX</strong>
+          <p></p>
+        </div>
+        <div class="result-hsl">
+          <strong>HSL</strong>
+          <p></p>
+        </div>
+        <div class="result-hsv">
+          <strong>HSV</strong>
+          <p></p>
+        </div>
+        <div class="result-rgb">
+          <strong>RGB</strong>
+          <p></p>
+        </div>
+      </div>
+    </div>
 
     <script type="text/javascript" src="js/main.js"></script>
   </body>
