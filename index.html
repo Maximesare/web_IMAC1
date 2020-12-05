@@ -35,6 +35,30 @@
     </form>
 
     <form action="" method="post">
+      <p>D'après HSL</p>
+      <div class="form-section">
+        <input type="number" name="hsl-hue" min="0" max="255" placeholder="HUE" required>
+        <input type="number" name="hsl-saturation" min="0" max="100" placeholder="SATURATION" required>
+        <input type="number" name="lightness" min="0" max="100" placeholder="LIGHTNESS" required>
+      </div>
+      <div class="form-section">
+        <input id="hsl-convert-btn" type="button" value="GO">
+      </div>
+    </form>
+
+    <form action="" method="post">
+      <p>D'après HSV</p>
+      <div class="form-section">
+        <input type="number" name="hsv-hue" min="0" max="255" placeholder="HUE" required>
+        <input type="number" name="hsv-saturation" min="0" max="100" placeholder="SATURATION" required>
+        <input type="number" name="value" min="0" max="100" placeholder="VALUE" required>
+      </div>
+      <div class="form-section">
+        <input id="hsv-convert-btn" type="button" value="GO">
+      </div>
+    </form>
+
+    <form action="" method="post">
       <p>D'après RGB</p>
       <div class="form-section">
         <input type="number" name="red" min="0" max="255" placeholder="RED" required>
