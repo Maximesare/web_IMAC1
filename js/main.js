@@ -2,7 +2,10 @@
 const getData = async (from) => {
 	
 	// verification du formulaire
-	if(document.querySelector('input[name="r"]').value != "" && document.querySelector('input[name="g"]').value != "" && document.querySelector('input[name="b"]').value != "") {
+	if(
+		(from === "rgb" && document.querySelector('input[name="r"]').value != "" && document.querySelector('input[name="g"]').value != "" && document.querySelector('input[name="b"]').value != "")
+		|| (from === "hex" && document.querySelector('input[name="hex"]').value != "")
+		) {
 
 		// affichage du loader
 		document.querySelector('#loader').classList.remove("hidden");
@@ -11,6 +14,14 @@ const getData = async (from) => {
 		document.querySelector('#conversion-result').classList.add("hidden");
 
 		// detection du format de couleur donne par l'utilisateur
+		if(from == "hex") {
+
+			// recuperation des valeurs saisies
+			let hex = document.querySelector('input[name="hex"]').value;
+
+			// ecriture de l'url d'appel de l'API
+			var response = await fetch('https://cors-anywhere.herokuapp.com/http://thecolorapi.com/id?hex='+hex+'&format=json');
+		}
 		if(from == "rgb") {
 
 			// recuperation des valeurs saisies
@@ -20,7 +31,7 @@ const getData = async (from) => {
 			let rgb = r+','+g+','+b;
 
 			// ecriture de l'url d'appel de l'API
-			var response = await fetch('https://cors-anywhere.herokuapp.com/http://thecolorapi.com/id?hex='+''+'&rgb='+rgb+'&format=json');
+			var response = await fetch('https://cors-anywhere.herokuapp.com/http://thecolorapi.com/id?rgb='+rgb+'&format=json');
 		}
 
 		const data = await response.json();
@@ -50,8 +61,13 @@ const getData = async (from) => {
 	}
 }
 
-const convert_btn = document.querySelector('#rgb-convert-btn');
-convert_btn.addEventListener('click', () => {
+const hex_convert_btn = document.querySelector('#hex-convert-btn');
+hex_convert_btn.addEventListener('click', () => {
+	getData("hex");
+});
+
+const rgb_convert_btn = document.querySelector('#rgb-convert-btn');
+rgb_convert_btn.addEventListener('click', () => {
 	getData("rgb");
 });
 
