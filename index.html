@@ -11,6 +11,19 @@
     <h1>Conversion</h1>
 
     <form action="" method="post">
+      <p>D'après CMYK</p>
+      <div class="form-section">
+        <input type="text" name="cyan" min="0" max="100" placeholder="CYAN" required>
+        <input type="text" name="magenta" min="0" max="100" placeholder="MAGENTA" required>
+        <input type="text" name="yellow" min="0" max="100" placeholder="YELLOW" required>
+        <input type="text" name="black" min="0" max="100" placeholder="BLACK" required>
+      </div>
+      <div class="form-section">
+        <input id="cmyk-convert-btn" type="button" value="GO">
+      </div>
+    </form>
+
+    <form action="" method="post">
       <p>D'après HEX</p>
       <div class="form-section">
         #
@@ -24,9 +37,9 @@
     <form action="" method="post">
       <p>D'après RGB</p>
       <div class="form-section">
-        <input type="number" name="r" min="0" max="255" placeholder="RED" required>
-        <input type="number" name="g" min="0" max="255" placeholder="GREEN" required>
-        <input type="number" name="b" min="0" max="255" placeholder="BLUE" required>
+        <input type="number" name="red" min="0" max="255" placeholder="RED" required>
+        <input type="number" name="green" min="0" max="255" placeholder="GREEN" required>
+        <input type="number" name="blue" min="0" max="255" placeholder="BLUE" required>
       </div>
       <div class="form-section">
         <input id="rgb-convert-btn" type="button" value="GO">

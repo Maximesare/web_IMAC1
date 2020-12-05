@@ -3,7 +3,8 @@ const getData = async (from) => {
 	
 	// verification du formulaire
 	if(
-		(from === "rgb" && document.querySelector('input[name="r"]').value != "" && document.querySelector('input[name="g"]').value != "" && document.querySelector('input[name="b"]').value != "")
+		(from === "cmyk" && document.querySelector('input[name="cyan"]').value != "" && document.querySelector('input[name="magenta"]').value != "" && document.querySelector('input[name="yellow"]').value != "" && document.querySelector('input[name="black"]').value != "")
+		|| (from === "rgb" && document.querySelector('input[name="red"]').value != "" && document.querySelector('input[name="green"]').value != "" && document.querySelector('input[name="blue"]').value != "")
 		|| (from === "hex" && document.querySelector('input[name="hex"]').value != "")
 		) {
 
@@ -14,6 +15,18 @@ const getData = async (from) => {
 		document.querySelector('#conversion-result').classList.add("hidden");
 
 		// detection du format de couleur donne par l'utilisateur
+		if(from == "cmyk") {
+
+			// recuperation des valeurs saisies
+			let c = document.querySelector('input[name="cyan"]').value;
+			let m = document.querySelector('input[name="magenta"]').value;
+			let y = document.querySelector('input[name="yellow"]').value;
+			let k = document.querySelector('input[name="black"]').value;
+			let cmyk = c+','+m+','+y+','+k;
+
+			// ecriture de l'url d'appel de l'API
+			var response = await fetch('https://cors-anywhere.herokuapp.com/http://thecolorapi.com/id?cmyk='+cmyk+'&format=json');
+		}
 		if(from == "hex") {
 
 			// recuperation des valeurs saisies
@@ -25,9 +38,9 @@ const getData = async (from) => {
 		if(from == "rgb") {
 
 			// recuperation des valeurs saisies
-			let r = document.querySelector('input[name="r"]').value;
-			let g = document.querySelector('input[name="g"]').value;
-			let b = document.querySelector('input[name="b"]').value;
+			let r = document.querySelector('input[name="red"]').value;
+			let g = document.querySelector('input[name="green"]').value;
+			let b = document.querySelector('input[name="blue"]').value;
 			let rgb = r+','+g+','+b;
 
 			// ecriture de l'url d'appel de l'API
@@ -60,6 +73,11 @@ const getData = async (from) => {
 		}
 	}
 }
+
+const cmyk_convert_btn = document.querySelector('#cmyk-convert-btn');
+cmyk_convert_btn.addEventListener('click', () => {
+	getData("cmyk");
+});
 
 const hex_convert_btn = document.querySelector('#hex-convert-btn');
 hex_convert_btn.addEventListener('click', () => {
