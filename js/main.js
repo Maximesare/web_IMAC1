@@ -7,6 +7,9 @@ const getDataFromRGB = async () => {
 		// affichage du loader
 		document.querySelector('#loader').classList.remove("hidden");
 
+		// cache de la couleur precedente
+		document.querySelector('#conversion-result').classList.add("hidden");
+
 		// recuperation des valeurs saisies
 		let r = document.querySelector('input[name="r"]').value;
 		let g = document.querySelector('input[name="g"]').value;
@@ -22,6 +25,8 @@ const getDataFromRGB = async () => {
 			document.querySelector('#loader').classList.add("hidden");
 
 			// affichage des resultats
+			console.log(data);
+
 			document.querySelector('#conversion-result').classList.remove("hidden");
 			document.querySelector('#conversion-result div.result-hex p').innerHTML = data.hex.value;
 			document.querySelector('#conversion-result div.result-rgb p').innerHTML = data.rgb.value;
@@ -29,6 +34,7 @@ const getDataFromRGB = async () => {
 			document.querySelector('#conversion-result div.result-hsl p').innerHTML = data.hsl.value;
 			document.querySelector('#conversion-result div.result-hsv p').innerHTML = data.hsv.value;
 			document.querySelector('#color-sample').style.backgroundColor = data.hex.value;
+			document.querySelector('#conversion-result h2').innerHTML = data.name.value;
 		}
 		catch(e) {
 			console.log('error', e);
