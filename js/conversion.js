@@ -79,9 +79,6 @@ const getData = async (from) => {
 			document.querySelector('#loader').classList.add("hidden");
 
 			// affichage des resultats
-
-			console.log(data);
-
 			document.querySelector('#conversion-result h2').innerHTML = data.name.value;
 			document.querySelector('#color-sample').style.backgroundColor = data.rgb.value;
 			document.querySelector('#conversion-result').classList.remove("hidden");
