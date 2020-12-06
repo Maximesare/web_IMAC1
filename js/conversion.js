@@ -124,6 +124,7 @@ rgb_convert_btn.addEventListener('click', () => {
 });
 
 
+
 // "onglets" du formulaire "A partir de quel format ?"
 var from = 'cmyk';
 switch(from) {
@@ -150,7 +151,6 @@ function change_from(name) {
 	document.getElementById(name+'-form').style.display = 'block';
 	anc_from = name;
 }
-
 
 
 
