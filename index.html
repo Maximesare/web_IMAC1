@@ -12,13 +12,14 @@
   <body>
     <div id="navbar" class="onglets">
       <div>
+        <h1>Web_IMAC1</h1>
         <span class="onglet_0 onglet" id="onglet_conversion" onclick="javascript:change_onglet('conversion');"><i class="fa fa-bars"></i> Conversion</span>
         <span class="onglet_0 onglet" id="onglet_palette" onclick="javascript:change_onglet('palette');"><i class="fa fa-tags"></i> Palette</span>
       </div>
     </div>
 
     <div class='contenu_onglet' id='contenu_conversion'>
-      <h1>Conversion de couleur</h1>
+      <h1>Convertir une couleur</h1>
 
       <form id="global-form" action="" method="post">
         <p>À partir de quel format ?</p>
@@ -39,7 +40,7 @@
           <input type="number" name="black" min="0" max="100" placeholder="BLACK" required>
         </div>
         <div class="form-section">
-          <input id="cmyk-convert-btn" type="button" value="GO">
+          <input id="cmyk-convert-btn" type="button" value="Convertir">
         </div>
       </form>
 
@@ -49,7 +50,7 @@
           <input type="text" name="hex" placeholder="000000" required>
         </div>
         <div class="form-section">
-          <input id="hex-convert-btn" type="button" value="GO">
+          <input id="hex-convert-btn" type="button" value="Convertir">
         </div>
       </form>
 
@@ -60,7 +61,7 @@
           <input type="number" name="lightness" min="0" max="100" placeholder="LIGHTNESS" required>
         </div>
         <div class="form-section">
-          <input id="hsl-convert-btn" type="button" value="GO">
+          <input id="hsl-convert-btn" type="button" value="Convertir">
         </div>
       </form>
 
@@ -71,7 +72,7 @@
           <input type="number" name="value" min="0" max="100" placeholder="VALUE" required>
         </div>
         <div class="form-section">
-          <input id="hsv-convert-btn" type="button" value="GO">
+          <input id="hsv-convert-btn" type="button" value="Convertir">
         </div>
       </form>
 
@@ -82,7 +83,7 @@
           <input type="number" name="blue" min="0" max="255" placeholder="BLUE" required>
         </div>
         <div class="form-section">
-          <input id="rgb-convert-btn" type="button" value="GO">
+          <input id="rgb-convert-btn" type="button" value="Convertir">
         </div>
       </form>
 
@@ -118,9 +119,13 @@
     </div>
 
     <div class='contenu_onglet' id='contenu_palette'>
-      <h1>Générateur de palette</h1>
+      <h1>Générer une palette</h1>
 
     </div>
+
+    <footer>
+      <p>Web_IMAC1 &copy; 2020 &mdash; données fournies par <a href="https://www.thecolorapi.com/">The Color API</a></p>
+    </footer>
 
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/conversion.js"></script>

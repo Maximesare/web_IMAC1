@@ -3,6 +3,7 @@
 body {
   font-family: "Helvetica", sans-serif;
   text-align: center;
+  padding-top: 1px;
   background: lightgrey; 
 }
 
@@ -21,7 +22,6 @@ input[type="button"] {
   padding: 15px;
   background: unset;
   border: 1px solid black;
-  text-transform: uppercase;
   transition: all 0.3s;
 }
 
@@ -32,15 +32,28 @@ input[type="button"]:hover {
   transform: scale(0.95);
 }
 
+footer {
+  min-height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+}
+
 
 
 
 
 /*--- ONGLETS ---*/
 
+#navbar h1 {
+  display: inline-block;
+  margin: 0 50px;
+}
+
 #navbar {
   display: flex;
-  min-height: 50px;
+  min-height: 100px;
 }
 
 #navbar:not(.sticky) {
@@ -62,8 +75,21 @@ input[type="button"]:hover {
   margin-top: 50px;
 }
 
+.sticky > div {
+  display: flex;
+  align-items: center;
+}
+
+#navbar.sticky h1 {
+  margin: 0 50px 0 0;
+}
+
 .sticky .onglet {
   border-radius: 10px;
+}
+
+.sticky .onglet:not(:nth-child(2)) {
+  margin-left: 20px;
 }
 
 .sticky .onglet_1 {
@@ -78,6 +104,10 @@ input[type="button"]:hover {
 .onglet {
   display: inline-block;
   cursor: pointer;
+}
+
+.onglet:not(:nth-child(2)) {
+  margin-left: 5px;
 }
 
 .onglet_0, .onglet_1 {
@@ -103,9 +133,26 @@ input[type="button"]:hover {
 .contenu_onglet {
   background: white;
   padding: 50px 20px;
-  min-height: calc(100vh - 150px);
+  min-height: calc(100vh - 301px);
   display: none;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+
+
+/*--- RESPONSIVE ONGLETS ---*/
+
+@media screen and (max-width: 768px) {
+  .sticky > div {
+    display: initial;
+  }
+  #navbar h1, #navbar.sticky h1 {
+    display: block;
+    margin: 0 0 5px 0;
+  }
+  #navbar {
+    justify-content: center;
+  }
 }
 
 
