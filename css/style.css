@@ -4,6 +4,7 @@ body {
   font-family: "Helvetica", sans-serif;
   padding: 50px;
   text-align: center;
+  background: lightgrey; 
 }
 
 .hidden {
@@ -14,7 +15,7 @@ input {
   padding: 10px 20px;
   margin: 15px;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 input[type="button"] {
@@ -22,12 +23,84 @@ input[type="button"] {
   background: unset;
   border: 1px solid black;
   text-transform: uppercase;
+  transition: all 0.3s;
 }
 
 input[type="button"]:hover {
   color: white;
   background: black;
   cursor: pointer;
+  transform: scale(0.95);
+}
+
+
+
+
+
+/*--- ONGLETS ---*/
+
+.sticky {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: calc(100% - 100px);
+  min-height: 50px;
+  background: white;
+  padding: 5px 50px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.shifty {
+  margin-top: 50px;
+}
+
+.sticky .onglet {
+  border-radius: 10px;
+}
+
+.sticky .onglet_1 {
+  background: lightgrey;
+}
+
+.onglets {
+  display: flex;
+  justify-content: space-between;
+}
+
+.onglet {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.onglet_0, .onglet_1 {
+  padding: 10px 20px;
+  border-radius: 10px 10px 0 0;
+  transition: all 0.3s; 
+}
+
+.onglet_0 {
+  background: black;
+  color: white;
+}
+
+.onglet_1 {
+  background: white;
+}
+
+.onglet_0:hover {
+  background: black;
+  transform: scale(0.95);
+}
+
+.contenu_onglet {
+  background: white;
+  padding: 50px 20px;
+  min-height: 50vh;
+  display: none;
+  border-radius: 0 10px 10px 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 
@@ -42,7 +115,7 @@ input[type="button"]:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 50px;
   min-height: 100px;
 }
@@ -66,7 +139,7 @@ input[type="button"]:hover {
 
 #color-sample {
   flex-direction: column;
-  border-radius: 5px;
+  border-radius: 10px;
   min-height: 100px;
 }
 
@@ -75,7 +148,7 @@ input[type="button"]:hover {
   flex-direction: column;
   justify-content: center;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 10px;
   min-width: 150px;
   min-height: 150px;
   padding: 15px;

@@ -8,96 +8,110 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <h1>Conversion</h1>
+    <div id="navbar" class="onglets">
+      <div>
+        <span class="onglet_0 onglet" id="onglet_conversion" onclick="javascript:change_onglet('conversion');"><i class="fa fa-bars"></i> Conversion</span>
+        <span class="onglet_0 onglet" id="onglet_palette" onclick="javascript:change_onglet('palette');"><i class="fa fa-tags"></i> Palette</span>
+      </div>
+    </div>
 
-    <form action="" method="post">
-      <p>D'après CMYK</p>
-      <div class="form-section">
-        <input type="text" name="cyan" min="0" max="100" placeholder="CYAN" required>
-        <input type="text" name="magenta" min="0" max="100" placeholder="MAGENTA" required>
-        <input type="text" name="yellow" min="0" max="100" placeholder="YELLOW" required>
-        <input type="text" name="black" min="0" max="100" placeholder="BLACK" required>
-      </div>
-      <div class="form-section">
-        <input id="cmyk-convert-btn" type="button" value="GO">
-      </div>
-    </form>
+    <div class='contenu_onglet' id='contenu_conversion'>
+      <h1>Conversion de couleur</h1>
 
-    <form action="" method="post">
-      <p>D'après HEX</p>
-      <div class="form-section">
-        #
-        <input type="text" name="hex" placeholder="000000" required>
-      </div>
-      <div class="form-section">
-        <input id="hex-convert-btn" type="button" value="GO">
-      </div>
-    </form>
-
-    <form action="" method="post">
-      <p>D'après HSL</p>
-      <div class="form-section">
-        <input type="number" name="hsl-hue" min="0" max="255" placeholder="HUE" required>
-        <input type="number" name="hsl-saturation" min="0" max="100" placeholder="SATURATION" required>
-        <input type="number" name="lightness" min="0" max="100" placeholder="LIGHTNESS" required>
-      </div>
-      <div class="form-section">
-        <input id="hsl-convert-btn" type="button" value="GO">
-      </div>
-    </form>
-
-    <form action="" method="post">
-      <p>D'après HSV</p>
-      <div class="form-section">
-        <input type="number" name="hsv-hue" min="0" max="255" placeholder="HUE" required>
-        <input type="number" name="hsv-saturation" min="0" max="100" placeholder="SATURATION" required>
-        <input type="number" name="value" min="0" max="100" placeholder="VALUE" required>
-      </div>
-      <div class="form-section">
-        <input id="hsv-convert-btn" type="button" value="GO">
-      </div>
-    </form>
-
-    <form action="" method="post">
-      <p>D'après RGB</p>
-      <div class="form-section">
-        <input type="number" name="red" min="0" max="255" placeholder="RED" required>
-        <input type="number" name="green" min="0" max="255" placeholder="GREEN" required>
-        <input type="number" name="blue" min="0" max="255" placeholder="BLUE" required>
-      </div>
-      <div class="form-section">
-        <input id="rgb-convert-btn" type="button" value="GO">
-      </div>
-    </form>
-
-    <div id="loader" class="hidden"></div>
-
-    <div id="conversion-result" class="hidden">
-      <h2></h2>
-      <div id="color-sample">
-      </div>
-      <div id="color-codes">
-        <div class="result-cmyk">
-          <strong>CMYK</strong>
-          <p></p>
+      <form action="" method="post">
+        <p>D'après CMYK</p>
+        <div class="form-section">
+          <input type="text" name="cyan" min="0" max="100" placeholder="CYAN" required>
+          <input type="text" name="magenta" min="0" max="100" placeholder="MAGENTA" required>
+          <input type="text" name="yellow" min="0" max="100" placeholder="YELLOW" required>
+          <input type="text" name="black" min="0" max="100" placeholder="BLACK" required>
         </div>
-        <div class="result-hex">
-          <strong>HEX</strong>
-          <p></p>
+        <div class="form-section">
+          <input id="cmyk-convert-btn" type="button" value="GO">
         </div>
-        <div class="result-hsl">
-          <strong>HSL</strong>
-          <p></p>
+      </form>
+
+      <form action="" method="post">
+        <p>D'après HEX</p>
+        <div class="form-section">
+          #
+          <input type="text" name="hex" placeholder="000000" required>
         </div>
-        <div class="result-hsv">
-          <strong>HSV</strong>
-          <p></p>
+        <div class="form-section">
+          <input id="hex-convert-btn" type="button" value="GO">
         </div>
-        <div class="result-rgb">
-          <strong>RGB</strong>
-          <p></p>
+      </form>
+
+      <form action="" method="post">
+        <p>D'après HSL</p>
+        <div class="form-section">
+          <input type="number" name="hsl-hue" min="0" max="255" placeholder="HUE" required>
+          <input type="number" name="hsl-saturation" min="0" max="100" placeholder="SATURATION" required>
+          <input type="number" name="lightness" min="0" max="100" placeholder="LIGHTNESS" required>
+        </div>
+        <div class="form-section">
+          <input id="hsl-convert-btn" type="button" value="GO">
+        </div>
+      </form>
+
+      <form action="" method="post">
+        <p>D'après HSV</p>
+        <div class="form-section">
+          <input type="number" name="hsv-hue" min="0" max="255" placeholder="HUE" required>
+          <input type="number" name="hsv-saturation" min="0" max="100" placeholder="SATURATION" required>
+          <input type="number" name="value" min="0" max="100" placeholder="VALUE" required>
+        </div>
+        <div class="form-section">
+          <input id="hsv-convert-btn" type="button" value="GO">
+        </div>
+      </form>
+
+      <form action="" method="post">
+        <p>D'après RGB</p>
+        <div class="form-section">
+          <input type="number" name="red" min="0" max="255" placeholder="RED" required>
+          <input type="number" name="green" min="0" max="255" placeholder="GREEN" required>
+          <input type="number" name="blue" min="0" max="255" placeholder="BLUE" required>
+        </div>
+        <div class="form-section">
+          <input id="rgb-convert-btn" type="button" value="GO">
+        </div>
+      </form>
+
+      <div id="loader" class="hidden"></div>
+
+      <div id="conversion-result" class="hidden">
+        <h2></h2>
+        <div id="color-sample">
+        </div>
+        <div id="color-codes">
+          <div class="result-cmyk">
+            <strong>CMYK</strong>
+            <p></p>
+          </div>
+          <div class="result-hex">
+            <strong>HEX</strong>
+            <p></p>
+          </div>
+          <div class="result-hsl">
+            <strong>HSL</strong>
+            <p></p>
+          </div>
+          <div class="result-hsv">
+            <strong>HSV</strong>
+            <p></p>
+          </div>
+          <div class="result-rgb">
+            <strong>RGB</strong>
+            <p></p>
+          </div>
         </div>
       </div>
+    </div>
+
+    <div class='contenu_onglet' id='contenu_palette'>
+      <h1>Palette</h1>
+      
     </div>
 
     <script type="text/javascript" src="js/main.js"></script>
