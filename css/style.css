@@ -7,7 +7,7 @@ body {
   font-family: "Varela Round", sans-serif;
   text-align: center;
   padding-top: 1px;
-  background: lightgrey; 
+  background: whitesmoke; 
 }
 
 h1, h2, h3, h4, h5, strong {
@@ -107,7 +107,7 @@ footer a {
 }
 
 .sticky .onglet_1 {
-  background: lightgrey;
+  background: whitesmoke;
 }
 
 .onglets {
