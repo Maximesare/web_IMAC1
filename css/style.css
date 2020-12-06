@@ -165,7 +165,7 @@ footer a {
   }
   #navbar h1, #navbar.sticky h1 {
     display: block;
-    margin: 0 0 5px 0;
+    margin: 0 0 15px 0;
   }
   #navbar {
     justify-content: center;
