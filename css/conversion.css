@@ -32,11 +32,6 @@
   animation: fade-pop-in 1s ease;
 }
 
-#color-codes > div:hover {
-  transform: scale(0.95);
-  cursor: pointer;
-}
-
 #color-codes strong {
   margin: 20px 0;
 }
