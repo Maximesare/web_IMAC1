@@ -168,3 +168,25 @@ input[type="button"]:hover {
 #color-codes p {
   margin-top: 0;
 }
+
+form:not(#global-form) {
+  display: none;
+}
+
+.from {
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s; 
+}
+
+.from.from_1 {
+  background: black;
+  color: white;
+}
+
+.from.from_0:hover {
+  background: black;
+  transform: scale(0.95);
+}
+
+

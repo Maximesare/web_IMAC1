@@ -124,6 +124,34 @@ rgb_convert_btn.addEventListener('click', () => {
 });
 
 
+// "onglets" du formulaire "A partir de quel format ?"
+var from = 'cmyk';
+switch(from) {
+	case 'hex':
+	  var anc_from = 'hex';
+	  break;
+	case 'hsl':
+	  var anc_from = 'hsl';
+	  break;
+	  case 'hsv':
+	  var anc_from = 'hsv';
+	  break;
+	  case 'rgb':
+	  var anc_from = 'rgb';
+	  break;
+	default:
+	  var anc_from = 'cmyk';
+}
+
+function change_from(name) {
+	document.getElementById(anc_from+'-global-btn').className = 'from_0 from';
+	document.getElementById(name+'-global-btn').className = 'from_1 from';
+	document.getElementById(anc_from+'-form').style.display = 'none';
+	document.getElementById(name+'-form').style.display = 'block';
+	anc_from = name;
+}
+
+
 
 
 
@@ -155,7 +183,7 @@ function change_onglet(name) {
 	anc_onglet = name;
 }
 
-var onglet ='conversion';
+var onglet = 'conversion';
 switch(onglet) {
 	case 'conversion':
 	  var anc_onglet = 'conversion';

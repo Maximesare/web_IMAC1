@@ -18,8 +18,18 @@
     <div class='contenu_onglet' id='contenu_conversion'>
       <h1>Conversion de couleur</h1>
 
-      <form action="" method="post">
-        <p>D'après CMYK</p>
+      <form id="global-form" action="" method="post">
+        <p>À partir de quel format ?</p>
+        <div class="form-section">
+          <input id="cmyk-global-btn" class="from_0 from" onclick="javascript:change_from('cmyk');" type="button" value="CMYK">
+          <input id="hex-global-btn" class="from_0 from" onclick="javascript:change_from('hex');" type="button" value="HEX">
+          <input id="hsl-global-btn" class="from_0 from" onclick="javascript:change_from('hsl');" type="button" value="HSL">
+          <input id="hsv-global-btn" class="from_0 from" onclick="javascript:change_from('hsv');" type="button" value="HSV">
+          <input id="rgb-global-btn" class="from_0 from" onclick="javascript:change_from('rgb');" type="button" value="RGB">
+        </div>
+      </form>
+
+      <form id="cmyk-form" action="" method="post">
         <div class="form-section">
           <input type="text" name="cyan" min="0" max="100" placeholder="CYAN" required>
           <input type="text" name="magenta" min="0" max="100" placeholder="MAGENTA" required>
@@ -31,8 +41,7 @@
         </div>
       </form>
 
-      <form action="" method="post">
-        <p>D'après HEX</p>
+      <form id="hex-form" action="" method="post">
         <div class="form-section">
           #
           <input type="text" name="hex" placeholder="000000" required>
@@ -42,8 +51,7 @@
         </div>
       </form>
 
-      <form action="" method="post">
-        <p>D'après HSL</p>
+      <form id="hsl-form" action="" method="post">
         <div class="form-section">
           <input type="number" name="hsl-hue" min="0" max="255" placeholder="HUE" required>
           <input type="number" name="hsl-saturation" min="0" max="100" placeholder="SATURATION" required>
@@ -54,8 +62,7 @@
         </div>
       </form>
 
-      <form action="" method="post">
-        <p>D'après HSV</p>
+      <form id="hsv-form" action="" method="post">
         <div class="form-section">
           <input type="number" name="hsv-hue" min="0" max="255" placeholder="HUE" required>
           <input type="number" name="hsv-saturation" min="0" max="100" placeholder="SATURATION" required>
@@ -66,8 +73,7 @@
         </div>
       </form>
 
-      <form action="" method="post">
-        <p>D'après RGB</p>
+      <form id="rgb-form" action="" method="post">
         <div class="form-section">
           <input type="number" name="red" min="0" max="255" placeholder="RED" required>
           <input type="number" name="green" min="0" max="255" placeholder="GREEN" required>
@@ -111,7 +117,7 @@
 
     <div class='contenu_onglet' id='contenu_palette'>
       <h1>Générateur de palette</h1>
-      
+
     </div>
 
     <script type="text/javascript" src="js/main.js"></script>
