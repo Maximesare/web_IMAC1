@@ -25,6 +25,10 @@ input {
   border-radius: 10px;
 }
 
+input:not([type="button"]) {
+  min-width: 200px;
+}
+
 input[type="button"] {
   padding: 15px;
   background: unset;
@@ -59,18 +63,28 @@ footer a {
 
 /*--- ONGLETS ---*/
 
-#navbar h1 {
+#navbar a {
   display: inline-block;
   margin: 0 50px;
+  text-decoration: none;
+  color: black;
+  font-family: "Pacifico", sans-serif;
+  font-size: xx-large;
+  font-weight: bold;
+  animation: unfold-right 1s ease;
 }
 
 #navbar {
   display: flex;
+  background: white;
   min-height: 100px;
+  position: relative;
+  z-index: 999;
 }
 
 #navbar:not(.sticky) {
   align-items: flex-end;
+  box-shadow: inset 0px -16px 8px -16px rgba(0,0,0,0.25);
 }
 
 #navbar.sticky {
@@ -82,7 +96,6 @@ footer a {
   background: white;
   padding: 5px 50px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.25);
-  z-index: 999;
 }
 
 .shifty {
@@ -94,7 +107,7 @@ footer a {
   align-items: center;
 }
 
-#navbar.sticky h1 {
+#navbar.sticky a {
   margin: 0 50px 0 0;
 }
 
@@ -153,6 +166,7 @@ footer a {
   min-height: calc(100vh - 301px);
   display: none;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.25);
+  animation: unfold-down 1s ease;
 }
 
 
@@ -160,12 +174,21 @@ footer a {
 /*--- RESPONSIVE ONGLETS ---*/
 
 @media screen and (max-width: 768px) {
+  #navbar > div {
+    margin-top: 15px;
+  }
+  .shifty {
+    margin-top: 105px;
+  }
   .sticky > div {
     display: initial;
+    margin-bottom: 15px;
   }
-  #navbar h1, #navbar.sticky h1 {
+  #navbar a, #navbar.sticky a {
     display: block;
     margin: 0 0 15px 0;
+    animation: unfold-down 1s ease;
+    font-size: x-large;
   }
   #navbar {
     justify-content: center;
@@ -187,8 +210,44 @@ footer a {
   border-radius: 10px;
   margin-top: 50px;
   min-height: 100px;
+  animation: fade-pop-in 1s ease;
 }
 
+
+
+
+
+/*--- ANIMATIONS ---*/
+
+@keyframes fade-pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@keyframes unfold-down {
+  from {
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes unfold-right {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
 
 
 

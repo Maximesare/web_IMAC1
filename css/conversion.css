@@ -15,6 +15,7 @@
   flex-direction: column;
   border-radius: 10px;
   min-height: 100px;
+  animation: fade-pop-in 1s ease;
 }
 
 #color-codes > div {
@@ -28,6 +29,7 @@
   padding: 15px;
   margin: 25px;
   transition: all 0.3s;
+  animation: fade-pop-in 1s ease;
 }
 
 #color-codes > div:hover {
@@ -45,6 +47,7 @@
 
 form:not(#global-form) {
   display: none;
+  animation: fade-pop-in 1s ease;
 }
 
 .from {

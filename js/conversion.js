@@ -126,6 +126,14 @@ rgb_convert_btn.addEventListener('click', () => {
 
 
 // "onglets" du formulaire "A partir de quel format ?"
+function change_from(name) {
+	document.getElementById(anc_from+'-global-btn').className = 'from_0 from';
+	document.getElementById(name+'-global-btn').className = 'from_1 from';
+	document.getElementById(anc_from+'-form').style.display = 'none';
+	document.getElementById(name+'-form').style.display = 'block';
+	anc_from = name;
+}
+
 var from = 'cmyk';
 switch(from) {
 	case 'hex':
@@ -144,13 +152,7 @@ switch(from) {
 	  var anc_from = 'cmyk';
 }
 
-function change_from(name) {
-	document.getElementById(anc_from+'-global-btn').className = 'from_0 from';
-	document.getElementById(name+'-global-btn').className = 'from_1 from';
-	document.getElementById(anc_from+'-form').style.display = 'none';
-	document.getElementById(name+'-form').style.display = 'block';
-	anc_from = name;
-}
+change_from(anc_from);
 
 
 
