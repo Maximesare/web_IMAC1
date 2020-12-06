@@ -63,6 +63,16 @@ footer a {
 
 
 
+/*--- RESPONSIVE GENERAL ---*/
+
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+}
+
+
+
 
 
 /*--- ONGLETS ---*/
