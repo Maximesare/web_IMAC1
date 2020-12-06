@@ -1,0 +1,72 @@
+/*--- CONVERSION ---*/
+
+#conversion-result {
+  margin-top: 35px;
+}
+
+#color-codes, #color-sample {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+#color-sample {
+  flex-direction: column;
+  border-radius: 10px;
+  min-height: 100px;
+}
+
+#color-codes > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  min-width: 150px;
+  min-height: 150px;
+  padding: 15px;
+  margin: 25px;
+  transition: all 0.3s;
+}
+
+#color-codes > div:hover {
+  transform: scale(0.95);
+  cursor: pointer;
+}
+
+#color-codes strong {
+  margin: 20px 0;
+}
+
+#color-codes p {
+  margin-top: 0;
+}
+
+form:not(#global-form) {
+  display: none;
+}
+
+.from {
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.from.from_1 {
+  background: black;
+  color: white;
+}
+
+.from.from_1:hover {
+  transform: scale(1);
+}
+
+.from.from_0:hover {
+  background: black;
+  transform: scale(0.95);
+}
+
+
+
+
