@@ -176,12 +176,16 @@ form:not(#global-form) {
 .from {
   display: inline-block;
   cursor: pointer;
-  transition: all 0.3s; 
+  transition: all 0.3s;
 }
 
 .from.from_1 {
   background: black;
   color: white;
+}
+
+.from.from_1:hover {
+  transform: scale(1);
 }
 
 .from.from_0:hover {
