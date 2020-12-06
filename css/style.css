@@ -153,6 +153,12 @@ input[type="button"]:hover {
   min-height: 150px;
   padding: 15px;
   margin: 25px;
+  transition: all 0.3s;
+}
+
+#color-codes > div:hover {
+  transform: scale(0.95);
+  cursor: pointer;
 }
 
 #color-codes strong {
