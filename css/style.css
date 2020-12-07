@@ -234,9 +234,7 @@ footer a {
   display: inline-block;
   text-align: right;
   position: fixed;
-  background: black;
-  color: white;
-  border: 1px solid white;
+  background: white;
   border-right: none;
   bottom: 150px;
   right: 0px;
@@ -248,6 +246,7 @@ footer a {
 
 #about.open {
   transform: translate3d(0, 0, 0);
+  box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.1);
 }
 
 #about-btn {
@@ -256,9 +255,7 @@ footer a {
   align-items: center;
   font-weight: bold;
   position: fixed;
-  background: black;
-  color: white;
-  border: 1px solid white;
+  background: white;
   bottom: 75px;
   right: 50px;
   width: 50px;
@@ -266,6 +263,7 @@ footer a {
   border-radius: 50%;
   transition: all 0.3s;
   animation: extreme-fade-pop-in 1s ease;
+  box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.1);
 }
 
 #about-btn:hover {
