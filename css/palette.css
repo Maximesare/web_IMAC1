@@ -1,6 +1,7 @@
 /*--- PALETTE ---*/
 
 #palette {
+	display: none;
 	animation: fade-pop-in 1s ease;
 	margin: 35px 0 25px 0;
 }
