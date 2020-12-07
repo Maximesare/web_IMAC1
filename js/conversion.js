@@ -79,7 +79,8 @@ const getData = async (from) => {
 			document.querySelector('#loader').classList.add("hidden");
 
 			// affichage des resultats
-			document.querySelector('#conversion-result h2').innerHTML = data.name.value;
+			document.querySelector('#color-sample h2').innerHTML = data.name.value;
+			document.querySelector('#color-sample h2').style.color = data.contrast.value;
 			document.querySelector('#color-sample').style.backgroundColor = data.rgb.value;
 			document.querySelector('#conversion-result').classList.remove("hidden");
 			document.querySelector('#conversion-result div.result-hex p').innerHTML = data.hex.value;
