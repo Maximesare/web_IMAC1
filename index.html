@@ -18,6 +18,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
+
+    <!--Navbar : onglets-->
     <div id="navbar" class="onglets">
       <div>
         <a href="index.html">Color Studio</a>
@@ -26,10 +28,11 @@
       </div>
     </div>
 
+    <!--Convertisseur-->
     <div class='contenu_onglet' id='contenu_conversion'>
       <h1>Convertir une couleur</h1>
 
-      <form id="global-form" action="" method="post">
+      <form class="global-form" action="" method="post">
         <p>À partir de quel format ?</p>
         <div class="form-section">
           <input id="cmyk-global-btn" class="from_0 from" onclick="javascript:change_from('cmyk');" type="button" value="CMYK">
@@ -126,35 +129,38 @@
       </div>
     </div>
 
-     <div class='contenu_onglet' id='contenu_palette'>
+    <!--Palettes-->
+    <div class='contenu_onglet' id='contenu_palette'>
       <h1>Générer une palette</h1>
 
-      <form id="global-form" action="" method="post" class="form_palette">
+      <form class="form_palette global-form" action="" method="post">
         <p>À partir de quel format ?</p>
         <div class="form-section">
-          <input name="cmyk_palette" type="text" id="cmyk_palette" placeholder="CMYK Ex: 100,58,0,33">
-          <input name="hex_palette" type="text" id="hex_palette" placeholder="HEX Ex: 0047AB" >
-          <input name="hsl_palette" type="text" id="hsl_palette" placeholder="HSL Ex: 215,100%,34%">
-          <input name="hsv_palette" type="text" id="hsv_palette" placeholder="HSV Ex: 215,100%,34%">
-          <input name="rgb_palette" type="text" id="rgb_palette" placeholder="RGB Ex: 0,71,171">
+          <input name="cmyk_palette" type="text" id="cmyk_palette" placeholder="CMYK ex: 100,58,0,33">
+          <input name="hex_palette" type="text" id="hex_palette" placeholder="HEX ex: 0047AB" >
+          <input name="hsl_palette" type="text" id="hsl_palette" placeholder="HSL ex: 215,100%,34%">
+          <input name="hsv_palette" type="text" id="hsv_palette" placeholder="HSV ex: 215,100%,34%">
+          <input name="rgb_palette" type="text" id="rgb_palette" placeholder="RGB ex: 0,71,171">
         </div>
         <div class="form-section">
           <p>Quel type de palette souhaitez-vous ?</p>
            <select name="mode_de_palette" id="label_type_palette">
-               <option value="monochrome">Monochrome</option>
-               <option value="monochrome-dark">Monochrome dark</option>
-               <option value="monochrome-light">Monochrome light</option>
-               <option value="analogic">Analogic</option>
-               <option value="complement">Complement</option>
-               <option value="analogic-complement">Analogic complement</option>
-               <option value="triad">Triad</option>
-               <option value="quad">Quad</option>
+            <option value="monochrome">Monochrome</option>
+            <option value="monochrome-dark">Monochrome dark</option>
+            <option value="monochrome-light">Monochrome light</option>
+            <option value="analogic">Analogic</option>
+            <option value="complement">Complement</option>
+            <option value="analogic-complement">Analogic complement</option>
+            <option value="triad">Triad</option>
+            <option value="quad">Quad</option>
           </select>
         </div>
         <div class="form-section">
-            <input type="reset" value="Voir"  onclick="buttonClickGET()">
+          <input type="reset" value="Voir"  onclick="buttonClickGET()">
         </div>
       </form>
+
+      <div id="loader-palette" class="hidden"></div>
 
       <div id="palette">
         <div id="affiche_palette1">
@@ -201,3 +207,7 @@
     <script type="text/javascript" src="js/palette.js"></script>
   </body>
 </html>
+
+
+
+

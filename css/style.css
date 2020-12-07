@@ -31,18 +31,18 @@ textarea:focus, input:focus, select:focus {
   outline: none;
 }
 
-input:not([type="button"]) {
+input:not([type="button"]):not([type="reset"])  {
   min-width: 200px;
 }
 
-input[type="button"] {
+input[type="button"], input[type="reset"] {
   padding: 15px;
   background: unset;
   border: 1px solid black;
   transition: all 0.3s;
 }
 
-input[type="button"]:hover {
+input[type="button"]:hover, input[type="reset"]:hover {
   color: white;
   background: black;
   cursor: pointer;
@@ -212,7 +212,7 @@ footer a {
 
 /*--- LOADER ---*/
 
-#loader:not(.hidden) {
+#loader:not(.hidden), #loader-palette:not(.hidden) {
   background-color: black;
   background-image: url('../img/loader.gif');
   background-repeat: no-repeat;

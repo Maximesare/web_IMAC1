@@ -1,50 +1,39 @@
 /*--- PALETTE ---*/
 
 #palette {
-	text-align: center;
 	animation: fade-pop-in 1s ease;
+	margin: 35px 0 25px 0;
 }
 
 #palette div {
-	height:125px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	min-height: 100px;
+}
+
+#palette div span:not(:first-child) {
+	display: inline-block;
+	margin: 10px 25px;
 }
 
 #affiche_palette1 {
-	border-top-left-radius: 10px 10px;
-	border-top-right-radius: 10px 10px;
+	border-radius: 10px 10px 0 0;
+}
+
+#affiche_palette5  {
+	border-radius: 0 0 10px 10px;
 }
 
 
-#affiche_palette5 {
-	border-bottom-left-radius: 10px 10px;
-	border-bottom-right-radius: 10px 10px;
+
+/*--- RESPONSIVE PALETTE ---*/
+
+@media screen and (max-width: 1024px) {
+
 }
 
-input:not([type="reset"]) {
-  min-width: 200px;
-}
-
-input[type="reset"] {
-  padding: 15px;
-  background: unset;
-  border: 1px solid black;
-  transition: all 0.3s;
-}
-
-input[type="reset"]:hover {
-  color: white;
-  background: black;
-  cursor: pointer;
-  transform: scale(0.95);
-}
-
-
-#palette p { 
-	position:relative;
-	font-size: 15px;
-	margin-block-start: 0em;
-    margin-block-end: 0em;
- }
 
 
 

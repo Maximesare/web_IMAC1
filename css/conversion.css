@@ -40,7 +40,7 @@
   margin-top: 0;
 }
 
-form:not(#global-form) {
+form:not(.global-form) {
   display: none;
   animation: fade-pop-in 1s ease;
 }
@@ -64,6 +64,7 @@ form:not(#global-form) {
   background: black;
   transform: scale(0.95);
 }
+
 
 
 /*--- RESPONSIVE CONVERSION ---*/
