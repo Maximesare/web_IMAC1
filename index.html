@@ -119,37 +119,42 @@
       </div>
     </div>
 
-    <div class='contenu_onglet' id='contenu_palette'>
+   <div class='contenu_onglet' id='contenu_palette'>
       <h1>Générer une palette</h1>
 
-      <form id="global-form" action="" method="post">
+      <form id="global-form" action="" method="post" class="form_palette">
         <p>À partir de quel format ?</p>
         <div class="form-section">
-          <input name="cmyk_palette" type="text" placeholder="CMYK">
-          <input name="hex_palette" type="text" placeholder="HEX">
-          <input name="hsl_palette" type="text" placeholder="HSL">
-          <input name="hsv_palette" type="text" placeholder="HSV">
-          <input name="rgb_palette" type="text" placeholder="RGB">
-        </div>
-        <div class="form-section">
-          <p>Quel type de palette souhaitez-vous ?<p>
-          <select id="label_type_palette" name="mode_de_palette">
-            <option value="monochrome">monochrome</option>
-            <option value="monochrome-dark">monochrome dark</option>
-            <option value="monochrome-light">monochrome light</option>
-            <option value="analogic">analogic</option>
-            <option value="complement">complement</option>
-            <option value="analogic-complement">analogic complement</option>
-            <option value="triad">triad</option>
-            <option value="quad">quad</option>
-          </select>
-        </div>
-        <div class="form-section">
-          <input type="button" value="Voir" onclick="buttonClickGET()">
-        </div>
-      </form>
+          <input name="cmyk_palette" type="text" id="cmyk_palette" placeholder="CMYK">
+          <span id="aideCMYK"></span>
+          <input name="hex_palette" type="text" id="hex_palette" placeholder="HEX">
+          <span id="aideHEX"></span>
+          <input name="hsl_palette" type="text" id="hsl_palette" placeholder="HSL">
+          <span id="aideHSL"></span>
+          <input name="hsv_palette" type="text" id="hsv_palette" placeholder="HSV">
+          <span id="aideHSV"></span>
+          <input name="rgb_palette" type="text" id="rgb_palette" placeholder="RGB">
+          <span id="aideRGB"></span>
+          <br/>
+            <label for="label_type_palette">Quel type de palette souhaitez-vous ?</label><br />
+           <select name="mode_de_palette" id="label_type_palette">
+               <option value="monochrome">monochrome</option>
+               <option value="monochrome-dark">monochrome dark</option>
+               <option value="monochrome-light">monochrome light</option>
+               <option value="analogic">analogic</option>
+               <option value="complement">complement</option>
+               <option value="analogic-complement">analogic complement</option>
+               <option value="triad">triad</option>
+               <option value="quad">quad</option>
+           </select>
 
-      <div id="palette">
+           <br/>
+            <input type="button" value="voir"  onclick="buttonClickGET()"  />
+          </form>
+        </div>
+
+
+        <div id="palette">
           <div id="affiche_palette1">
           </div>
           <div id="affiche_palette2">
@@ -161,6 +166,7 @@
           <div id="affiche_palette5">
           </div>
       </div>
+
     </div>
 
     <footer>
