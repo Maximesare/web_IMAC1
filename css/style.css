@@ -18,14 +18,14 @@ h1, h2, h3, h4, h5, strong {
   display: none;
 }
 
-input {
+input, select {
   padding: 10px 20px;
   margin: 10px;
   border: 1px solid black;
   border-radius: 10px;
 }
 
-textarea:focus, input:focus{
+textarea:focus, input:focus, select:focus {
   outline: none;
 }
 
