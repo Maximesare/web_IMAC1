@@ -1,5 +1,17 @@
 /*--- PALETTE ---*/
 
+#palette {
+	text-align: center;
+	width: 600px;
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#palette div {
+	height:100px;
+}
 
 
 
