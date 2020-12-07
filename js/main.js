@@ -48,9 +48,9 @@ change_onglet(anc_onglet);
 const about_btn = document.querySelector('#about-btn');
 about_btn.addEventListener('click', () => {
 	if(document.querySelector('#about-btn p').innerHTML === "i"){
-		document.querySelector('#about-btn p').innerHTML = "X";
+		document.querySelector('#about-btn p').innerHTML = "x";
 	}
-	else if(document.querySelector('#about-btn p').innerHTML === "X"){
+	else if(document.querySelector('#about-btn p').innerHTML === "x"){
 		document.querySelector('#about-btn p').innerHTML = "i";
 	}
 	document.querySelector('#about').classList.toggle("open");
