@@ -122,6 +122,46 @@
     <div class='contenu_onglet' id='contenu_palette'>
       <h1>Générer une palette</h1>
 
+      <form id="global-form" action="" method="post">
+        <p>À partir de quel format ?</p>
+        <div class="form-section">
+          <input name="cmyk_palette" id="cmyk-global-btn" class="from_0 from" type="text" placeholder="CMYK">
+          <input name="hex_palette" id="hex-global-btn" class="from_0 from" type="text" placeholder="HEX">
+          <input name="hsl_palette" id="hsl-global-btn" class="from_0 from" type="text" placeholder="HSL">
+          <input name="hsv_palette" id="hsv-global-btn" class="from_0 from" type="text" placeholder="HSV">
+          <input name="rgb_palette" id="rgb-global-btn" class="from_0 from" type="text" placeholder="RGB">
+          <br/>
+            <label for="label_type_palette">Quel type de palette souhaitez-vous ?</label><br />
+           <select name="mode_de_palette" id="label_type_palette">
+               <option value="monochrome">monochrome</option>
+               <option value="monochrome-dark">monochrome dark</option>
+               <option value="monochrome-light">monochrome light</option>
+               <option value="analogic">analogic</option>
+               <option value="complement">complement</option>
+               <option value="analogic-complement">analogic complement</option>
+               <option value="triad">triad</option>
+               <option value="quad">quad</option>
+           </select>
+
+           <br/>
+            <input type="button" value="voir"  onclick="buttonClickGET()"  />
+          </form>
+        </div>
+
+
+        <div id="palette">
+          <div id="affiche_palette1">
+          </div>
+          <div id="affiche_palette2">
+          </div>
+          <div id="affiche_palette3">
+          </div>
+          <div id="affiche_palette4">
+          </div>
+          <div id="affiche_palette5">
+          </div>
+      </div>
+
     </div>
 
     <footer>
