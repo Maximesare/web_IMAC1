@@ -1,6 +1,4 @@
 // PALETTE
-document.getElementById('palette').style.display = "none";
-
 var callBackGetSuccess = function(data) {
     if (typeof data.colors !== 'undefined') {
 
