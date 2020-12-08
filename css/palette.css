@@ -6,6 +6,17 @@
 	margin: 35px 0 25px 0;
 }
 
+#palette-color-sample {
+  flex-direction: column;
+  border-radius: 10px;
+  min-height: 100px;
+  margin-bottom: 25px;
+}
+
+#palette-color-sample h2:first-letter {
+    text-transform: capitalize;
+}
+
 #palette div {
 	display: flex;
 	justify-content: center;

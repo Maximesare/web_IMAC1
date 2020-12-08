@@ -10,6 +10,11 @@ var callBackGetSuccess = function(data) {
         // on affiche les resultats
         document.getElementById('palette').style.display = "block";
 
+        document.querySelector('#palette-color-sample h2').innerHTML = data.mode+", d'après "+data.seed.name.value;
+        document.querySelector('#palette-color-sample h2').style.color = data.seed.contrast.value;
+        document.querySelector('#palette-color-sample').style.backgroundColor = data.seed.rgb.value;
+        console.log(data);
+
         var element1 = document.getElementById("affiche_palette1");
         element1.style.backgroundColor = data.colors[0].rgb.value;
         document.querySelector('#affiche_palette1 p').innerHTML = "<span>"+ data.colors[0].cmyk.value + "</span><span>" + data.colors[0].hex.value + "</span><span>" + data.colors[0].hsl.value + "</span><span>" + data.colors[0].hsv.value + "</span><span>" + data.colors[0].rgb.value + "</span>";
