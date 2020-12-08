@@ -14,7 +14,7 @@
 	min-height: 100px;
 }
 
-#palette div span:not(:first-child) {
+#palette div span {
 	display: inline-block;
 	margin: 10px 25px;
 }
