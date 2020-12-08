@@ -159,6 +159,7 @@ const auto_palette_btn = document.querySelector('#auto-palette-btn');
 auto_palette_btn.addEventListener('click', () => {
 	change_onglet('palette');
 	document.querySelector('input[name="hex_palette"]').value = document.querySelector('#conversion-result div.result-hex p').innerHTML.substr(1, document.querySelector('#conversion-result div.result-hex p').innerHTML.lenght);
+    document.getElementById('palette').style.display = "none";
 });
 
 
