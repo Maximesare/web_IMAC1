@@ -43,12 +43,6 @@ var callBackGetSuccess = function(data) {
 
 function buttonClickGET() {
 
-    // affichage du loader
-    document.querySelector('#loader-palette').classList.remove("hidden");
-
-    // on cache les eventuels resultats precedents
-    document.getElementById('palette').style.display = "none";
-
     var mode = document.querySelector('select[name="mode_de_palette"]').value;
 
     var cmyk = document.querySelector('input[name="cmyk_palette"]').value;
@@ -57,31 +51,74 @@ function buttonClickGET() {
     var hsv = document.querySelector('input[name="hsv_palette"]').value;
     var rgb = document.querySelector('input[name="rgb_palette"]').value;
 
+    if(hex != "" || cmyk != "" || hsl != "" || hsv != "" || rgb != ""){
+        // affichage du loader
+        document.querySelector('#loader-palette').classList.remove("hidden");
+
+        // on cache les eventuels resultats precedents
+        document.getElementById('palette').style.display = "none";
+    }
+
     if(hex != "") {
         var url = "https://cors-anywhere.herokuapp.com/https://www.thecolorapi.com/scheme?hex="+hex+"&mode="+mode+"&count=5";
+        $.get(url, callBackGetSuccess).done(function() {
+            
+        })
+        .fail(function() {
+
+        })
+        .always(function() {
+            
+        });
     }
     else if(cmyk != "") {
         var url = "https://cors-anywhere.herokuapp.com/https://www.thecolorapi.com/scheme?cmyk="+cmyk+"&mode="+mode+"&count=5";
+        $.get(url, callBackGetSuccess).done(function() {
+            
+        })
+        .fail(function() {
+
+        })
+        .always(function() {
+            
+        });
     }
     else if(hsl != "") {
         var url = "https://cors-anywhere.herokuapp.com/https://www.thecolorapi.com/scheme?hsl="+hsl+"&mode="+mode+"&count=5";
+        $.get(url, callBackGetSuccess).done(function() {
+            
+        })
+        .fail(function() {
+
+        })
+        .always(function() {
+            
+        });
     }
     else if(hsv != "") {
         var url = "https://cors-anywhere.herokuapp.com/https://www.thecolorapi.com/scheme?hsv="+hsv+"&mode="+mode+"&count=5";
+        $.get(url, callBackGetSuccess).done(function() {
+            
+        })
+        .fail(function() {
+
+        })
+        .always(function() {
+            
+        });
     }
     else if(rgb != "") {
         var url = "https://cors-anywhere.herokuapp.com/https://www.thecolorapi.com/scheme?rgb="+rgb+"&mode="+mode+"&count=5";
+        $.get(url, callBackGetSuccess).done(function() {
+            
+        })
+        .fail(function() {
+
+        })
+        .always(function() {
+            
+        });
     }   
-
-    $.get(url, callBackGetSuccess).done(function() {
-        
-    })
-    .fail(function() {
-
-    })
-    .always(function() {
-        
-    });
 }
 
 
