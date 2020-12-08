@@ -65,6 +65,10 @@ form:not(.global-form) {
   transform: scale(0.95);
 }
 
+#auto-palette {
+  margin-top: 25px;
+}
+
 
 
 /*--- RESPONSIVE CONVERSION ---*/
