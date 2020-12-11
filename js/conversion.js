@@ -27,7 +27,7 @@ const getData = async (from) => {
 			let cmyk = c+','+m+','+y+','+k;
 
 			// ecriture de l'url d'appel de l'API
-			var response = await fetch('https://cors-anywhere.herokuapp.com/http://thecolorapi.com/id?cmyk='+cmyk);
+			var response = await fetch('https://cors-anywhere.herokuapp.com/https://www.thecolorapi.com/id?cmyk='+cmyk);
 		}
 		if(from == "hex") {
 
@@ -35,7 +35,7 @@ const getData = async (from) => {
 			let hex = document.querySelector('input[name="hex"]').value;
 
 			// ecriture de l'url d'appel de l'API
-			var response = await fetch('https://cors-anywhere.herokuapp.com/http://thecolorapi.com/id?hex='+hex);
+			var response = await fetch('https://cors-anywhere.herokuapp.com/https://www.thecolorapi.com/id?hex='+hex);
 		}
 		if(from == "hsl") {
 
@@ -46,7 +46,7 @@ const getData = async (from) => {
 			let hsl = h+','+s+','+l;
 
 			// ecriture de l'url d'appel de l'API
-			var response = await fetch('https://cors-anywhere.herokuapp.com/http://thecolorapi.com/id?hsl='+hsl);
+			var response = await fetch('https://cors-anywhere.herokuapp.com/https://www.thecolorapi.com/id?hsl='+hsl);
 		}
 		if(from == "hsv") {
 
@@ -57,7 +57,7 @@ const getData = async (from) => {
 			let hsv = h+','+s+','+v;
 
 			// ecriture de l'url d'appel de l'API
-			var response = await fetch('https://cors-anywhere.herokuapp.com/http://thecolorapi.com/id?hsv='+hsv);
+			var response = await fetch('https://cors-anywhere.herokuapp.com/https://www.thecolorapi.com/id?hsv='+hsv);
 		}
 		if(from == "rgb") {
 
@@ -68,7 +68,7 @@ const getData = async (from) => {
 			let rgb = r+','+g+','+b;
 
 			// ecriture de l'url d'appel de l'API
-			var response = await fetch('https://cors-anywhere.herokuapp.com/http://thecolorapi.com/id?rgb='+rgb);
+			var response = await fetch('https://cors-anywhere.herokuapp.com/https://www.thecolorapi.com/id?rgb='+rgb);
 		}
 
 		const data = await response.json();
